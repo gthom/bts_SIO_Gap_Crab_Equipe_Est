@@ -8,7 +8,7 @@
 #include "typeBorne.h"
 
 //constructeur
-TypeBorne::TypeBorne(string c, int d, int n, int a)
+TypeBorne::TypeBorne(QString c, int d, int n, int a)
 {
     codeTypeBorne=c;
     dureeRevision=d;

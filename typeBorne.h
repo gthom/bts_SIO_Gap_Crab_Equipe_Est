@@ -5,7 +5,7 @@
  */
 
 #include <iostream>
-#include <string>
+#include <QString>
 #ifndef TYPEBORNE_H
 #define TYPEBORNE_H
 
@@ -26,7 +26,7 @@ class TypeBorne
     public:
 
         //constructeur
-        TypeBorne(string c,int d, int n, int a);
+        TypeBorne(QString c,int d, int n, int a);
         TypeBorne();
 
         //Accesseur en lecture
@@ -73,6 +73,6 @@ class TypeBorne
         /**
          * @brief code du type de la borne
          */
-        string codeTypeBorne;
+        QString codeTypeBorne;
 };
 #endif // TYPEBORNE_H
