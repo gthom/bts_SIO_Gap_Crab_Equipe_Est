@@ -7,12 +7,12 @@
 #include "technicien.h"
 
 //constructeur
-Technicien::Technicien(int m, QString n, QString p, Visite lv)
+Technicien::Technicien(int m, QString n, QString p, QVector tv)
 {
     matricule = m;
     nom = n;
     prenom = p;
-    laVisite = lv;
+    tabVisite = tv;
 	
 }
 Technicien::Technicien()
