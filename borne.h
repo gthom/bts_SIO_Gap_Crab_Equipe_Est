@@ -1,3 +1,5 @@
+#ifndef BORNE_H
+#define BORNE_H
 /*
  * Auteur : tromanin
  * Date de création : jeudi 3 septembre 2015, 11:11:57
