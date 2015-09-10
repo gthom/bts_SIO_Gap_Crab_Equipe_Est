@@ -1,3 +1,9 @@
+/**
+ * @date 10 septembre 2015
+ * @author Alexia Fontraille
+ * @file typeBorne.cpp
+ */
+
 #include <iostream>
 #include "typeBorne.h"
 
@@ -17,7 +23,8 @@ TypeBorne::TypeBorne()
 
 //Implémentation
 /**
- * @brief TypeBorne::getDureeRevision
+ * @brief retourne la durée en minutes requise
+ * pour réaliser la révision sur les bornes de ce type
  * @return
  */
 int TypeBorne::getDureeRevision()
@@ -25,11 +32,23 @@ int TypeBorne::getDureeRevision()
     return dureeRevision;
 }
 
+/**
+ * @brief retourne le nombre de jours
+ * au dela duquel il faut envisager une révision
+ * sur les bornes de ce type
+ * @return
+ */
 int TypeBorne::getNbJoursEntreRevisions()
 {
     return nbJoursEntreRevisions;
 }
 
+/**
+ * @brief retourne le nombre d'unités de recharge
+ * au dela duquel il faut envisager une révision
+ * sur les bornes de ce type
+ * @return
+ */
 int TypeBorne::getNbUnitesEntreRevisions()
 {
     return nbUnitesEntreRevisions;
