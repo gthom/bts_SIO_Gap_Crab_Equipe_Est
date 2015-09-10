@@ -56,7 +56,7 @@ Visite Station::getVisiteAFaire()
         if(laBorne.estAReviser())
         {
             //je l'ajoute à laVisiteAFaire
-            laVisiteAFaire.getTabBorne(laBorne);
+            laVisiteAFaire.addBorne(laBorne);
         }
     }
     //je renvoie laVisiteAFaire
