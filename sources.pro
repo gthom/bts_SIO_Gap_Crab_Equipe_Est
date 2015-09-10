@@ -17,13 +17,15 @@ SOURCES += main.cpp\
         typeBorne.cpp\
         station.cpp\
         technicien.cpp\
-        visite.cpp
+        visite.cpp\
+        borne.cpp
 
 
 HEADERS  += mainwindow.h\
     typeBorne.h\
     visite.h\
     technicien.h\
-    station.h
+    station.h\
+    borne.h
 
 FORMS    += mainwindow.ui
