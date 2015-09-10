@@ -14,7 +14,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-        typeBorne.cpp
+        typeBorne.cpp\
+        station.cpp\
+        visite.cpp
+
 
 HEADERS  += mainwindow.h \
     typeBorne.h
