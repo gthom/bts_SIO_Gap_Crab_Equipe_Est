@@ -16,6 +16,10 @@ TypeBorne::TypeBorne()
 }
 
 //Implémentation
+/**
+ * @brief TypeBorne::getDureeRevision
+ * @return
+ */
 int TypeBorne::getDureeRevision()
 {
     return dureeRevision;
