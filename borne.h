@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 #include <QDate>
-#include "typeborne.h"
+#include "typeBorne.h"
 using namespace std;
 class Borne
 {
