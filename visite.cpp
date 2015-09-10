@@ -42,13 +42,13 @@ char Visite::getEtat()
 // modifie l'état de la visite, de 'p' programmée à 'a' affectée, ou de 'a' affectée à 'r' réalisée
 void Visite::changerEtat()
 {
-	if(etat == p)
+    if(etat =='p')
 	{
-		etat==a;
+        etat=='a';
 	}
-	if(etat == a)
+    if(etat =='a')
 	{
-		etat==r;
+        etat=='r';
 	}
 }
 
