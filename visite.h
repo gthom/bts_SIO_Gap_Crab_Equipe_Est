@@ -10,11 +10,15 @@
 #include <vector>
 #include "borne.h"
 #include "station.h"
+
 using namespace std;
+
+
 //déclaration
 class Visite
 {
 	private :
+
 		//état de la visite : 'p' pour programmée, 'a' pour affectée, 'r' pour réalisée
 		char etat;
 		// durée totale en minutes requise pour réaliser l'ensemble des révisions 
@@ -24,7 +28,8 @@ class Visite
 		Station laStation; 
 		// la collection des bornes de laStation concernées par la visite
 		vector<Borne> tabBorne; 
-	public :
+
+    public :
 		
 		// constructeur de Visite
 		Visite(char e, int d, Station ls, vector<Borne> tb);
