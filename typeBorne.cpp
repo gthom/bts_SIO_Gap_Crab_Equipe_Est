@@ -34,7 +34,8 @@ int TypeBorne::getDureeRevision()
 
 /**
  * @brief retourne le nombre de jours
- * au dela duquel il faut envisager une révision sur les bornes de ce type
+ * au dela duquel il faut envisager une révision
+ * sur les bornes de ce type
  * @return
  */
 int TypeBorne::getNbJoursEntreRevisions()
@@ -44,7 +45,8 @@ int TypeBorne::getNbJoursEntreRevisions()
 
 /**
  * @brief retourne le nombre d'unités de recharge
- * au dela duquel il faut envisager une révision sur les bornes de ce type
+ * au dela duquel il faut envisager une révision
+ * sur les bornes de ce type
  * @return
  */
 int TypeBorne::getNbUnitesEntreRevisions()
