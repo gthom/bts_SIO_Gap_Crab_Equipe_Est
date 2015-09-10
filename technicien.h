@@ -3,6 +3,9 @@
  * @author R.Chauveau
  * @date 09 septembre 2015 
  */
+#ifndef TECHNICIEN_H
+#define TECHNICIEN_H
+
 #include <iostream>
 #include <string>
 #include <QString>
@@ -48,3 +51,5 @@ class Technicien
         // retourne l'ensemble des visites affectées au technicien
 		int getLesVisites();
 };
+
+#endif // TECHNICIEN_H
