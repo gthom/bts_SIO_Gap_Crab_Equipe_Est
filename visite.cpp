@@ -62,9 +62,9 @@ void Visite::changerEtat()
     }
 }
 
-Borne Visite::getTabBorne()
+void Visite::addBorne(Borne laBorne)
 {
-    return tabBorne;
+   tabBorne.push_back(laBorne);
 }
 
 

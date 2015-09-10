@@ -43,7 +43,7 @@ class Visite
 		char getEtat();
 		// retourne l'état de la visite
         void changerEtat();
-        Borne getTabBorne();
+        void addBorne(Borne laBorne);
 
 };
 
