@@ -57,5 +57,9 @@ void Visite::changerEtat()
         etat='r';
 	}
 }
+Borne Visite::getTabBorne()
+{
+    return tabBorne;
+}
 
 
