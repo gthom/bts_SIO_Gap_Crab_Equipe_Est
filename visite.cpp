@@ -51,10 +51,12 @@ void Visite::changerEtat()
     if(etat =='p')
 	{
         etat='a';
+        return;
 	}
     if(etat =='a')
 	{
         etat='r';
+        return;
 	}
 }
 Borne Visite::getTabBorne()
