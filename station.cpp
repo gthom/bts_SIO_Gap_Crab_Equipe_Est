@@ -14,13 +14,14 @@
  * @param l
  */
 
-Station::Station(int s, QString l)
+Station::Station(int s, QString l, vector<Borne> br)
 {
     idStation=s;
     libelleEmplacement=l;
+    lesBornes=br;
 }
 
-void getVisiteAFaire()
+Visite Station::getVisiteAFaire()
 {
     //retourne une instance de classe Visite recensant toutes les bornes de la station qui nécessitent d'être révisées,
     //ou null s'il n'y a aucune borne à réviser
@@ -28,12 +29,13 @@ void getVisiteAFaire()
     //pour chaque borne du vecteur lesBornes
     foreach(Borne laBorne, lesBornes)
     {
-        //si la borne est à visiter je l'ajoute à laVisiteAFaire
+        //si la borne est à visiter
         if(laBorne.estAReviser())
         {
-            laVisiteAFaire.changerEtat();
-            //je renvoie laVisiteAFaire
-            return laVisiteAFaire;
+            //je l'ajoute à laVisiteAFaire
+            laVisiteAFaire.getTabBorne(laBorne);
         }
     }
+    //je renvoie laVisiteAFaire
+    return laVisiteAFaire;
 }

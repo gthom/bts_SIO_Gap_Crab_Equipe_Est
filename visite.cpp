@@ -30,7 +30,13 @@ Visite::Visite(char e, int d, Station ls, vector<Borne> tb)
 // des révisions prévues sur les bornes de la station
 int Visite::getDureeTotale()
 {
-	return dureeTotale;
+    int total = 0;
+    for(int cpt = 0; cpt<tabBorne.size(); cpt++)
+    {
+        total += tabBorne[cpt].getDureeRevision;
+
+    }
+    return total;
 }
 
 // retourne l'état de la visite
@@ -44,12 +50,18 @@ void Visite::changerEtat()
 {
     if(etat =='p')
 	{
-        etat=='a';
+        etat='a';
+        return;
 	}
     if(etat =='a')
 	{
-        etat=='r';
+        etat='r';
+        return;
 	}
+}
+Borne Visite::getTabBorne()
+{
+    return tabBorne;
 }
 
 

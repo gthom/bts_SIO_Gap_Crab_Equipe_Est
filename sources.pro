@@ -19,7 +19,8 @@ SOURCES += main.cpp\
         station.cpp\
         technicien.cpp\
         visite.cpp\
-        borne.cpp
+        borne.cpp\
+        maintenance.cpp
 
 
 HEADERS  += mainwindow.h\
@@ -27,6 +28,7 @@ HEADERS  += mainwindow.h\
     visite.h\
     technicien.h\
     station.h\
-    borne.h
+    borne.h\
+    maintenance.h
 
 FORMS    += mainwindow.ui
