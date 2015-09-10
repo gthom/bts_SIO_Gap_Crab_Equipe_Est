@@ -37,3 +37,4 @@ class Borne
 		// depuis la dernière révision a atteint le seuil établi pour ce type de borne ; 
 		// retourne faux sinon
 };
+#endif // BORNE_H

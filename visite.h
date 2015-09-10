@@ -6,6 +6,9 @@
  * @version
  */
 
+#ifndef VISITE_H
+#define VISITE_H
+
 #include <string>
 #include <vector>
 #include "borne.h"
@@ -43,3 +46,5 @@ class Visite
         Borne getTabBorne();
 
 };
+
+#endif // VISITE_H
