@@ -14,11 +14,23 @@
  * @param l
  */
 
-Station::Station(int s, QString l, vector<Borne> br)
+Station::Station(int s, QString l, QVector<Borne> br)
 {
     idStation=s;
     libelleEmplacement=l;
     lesBornes=br;
+}
+
+//retourne l'identifiant de la station
+int Station::getId()
+{
+    return idStation;
+}
+
+//retourne le libellé de l'emplacement
+QString Station::getLib()
+{
+    return libelleEmplacement;
 }
 
 Visite Station::getVisiteAFaire()
