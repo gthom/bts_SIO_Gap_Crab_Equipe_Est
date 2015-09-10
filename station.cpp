@@ -14,13 +14,14 @@
  * @param l
  */
 
-Station::Station(int s, QString l)
+Station::Station(int s, QString l, vector<Borne> br)
 {
     idStation=s;
     libelleEmplacement=l;
+    lesBornes=br;
 }
 
-Station::Visite getVisiteAFaire()
+Visite Station::getVisiteAFaire()
 {
     //retourne une instance de classe Visite recensant toutes les bornes de la station qui nécessitent d'être révisées,
     //ou null s'il n'y a aucune borne à réviser
@@ -32,7 +33,7 @@ Station::Visite getVisiteAFaire()
         if(laBorne.estAReviser())
         {
             //je l'ajoute à laVisiteAFaire
-            laVisiteAFaire.addBorne(laBorne);
+            laVisiteAFaire.getTabBorne(laBorne);
         }
     }
     //je renvoie laVisiteAFaire

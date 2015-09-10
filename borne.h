@@ -15,7 +15,7 @@ class Borne
 	private:
 		int idBorne; // Identifiant de la borne (entier)
 
-        QDate dateDerniereRevision; // Date de la dernière révision effectuée sur la borne
+        	QDate dateDerniereRevision; // Date de la dernière révision effectuée sur la borne
 
 		int indiceCompteurUnites;
 		// Nombre d'unités de recharge délivrées depuis la dernière révision,
