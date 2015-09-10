@@ -8,12 +8,12 @@ void Borne::getDureeRevision()
 
 void Borne::estAReviser()
 {
-    if(QDate::nbJoursEntreRevisions > ((QDate::currentDate())-(QDate::dateDerniereRevision)))
-	{
-		return true;
-	}
-	else
-	{
+    //if(QDate::nbJoursEntreRevisions > ((QDate::currentDate())-(QDate::dateDerniereRevision)))
+//	{
+//		return true;
+//	}
+//	else
+//	{
         if(indiceCompteurUnites > nbUnitesEntreRevisions)
 		{
 			return true;

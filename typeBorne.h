@@ -24,27 +24,55 @@ class TypeBorne
      * getNbUnitesEntreRevisions
      */
     public:
+
         //constructeur
         TypeBorne(string c,int d, int n, int a);
         TypeBorne();
 
         //Accesseur en lecture
 
-        //retourne la durée en minutes requise pour réaliser la révision sur les bornes de ce type
+        /**
+         * @brief retourne la durée en minutes requise
+         * pour réaliser la révision sur les bornes de ce type
+         */
         int getDureeRevision();
-        //retourne le nombre de jours au dela duquel il faut envisager une révision sur les bornes de ce type
+
+        /**
+         * @brief retourne le nb de jours
+         * au dela duquel il faut envisager une révision
+         * sur les bornes de ce type
+         */
         int getNbJoursEntreRevisions();
-        //retourne le nombre d'unités de recharge au dela duquel il faut envisager une révision sur les bornes de ce type
+
+        /**
+         * @brief retourne le nb d'unités de recharge
+         * au dela duquel il faut envisager une révision
+         * sur les bornes de ce type
+         */
         int getNbUnitesEntreRevisions();
 
     private:
-        //durée en minutes requise pour réaliser la révision sur les bornes de ce type
+
+        /** @brief durée en minutes pour réaliser la révision
+         * sur les bornes de ce type
+         */
         int dureeRevision;
-        //nombre de jours qui séparent deux révisions successives d'une borne de ce type
+
+        /**
+         * @brief nb de jours qui séparent deux révisions successives
+         * d'une borne de ce type
+         */
         int nbJoursEntreRevisions;
-        //nombre d'unités de recharges au delà duquel il faut envisager une nouvelle révision
+
+        /**
+         * @brief nb d'unités de recharges au dela duquel
+         * il faut envisager une nvelle révision
+         */
         int nbUnitesEntreRevisions;
-        //code du type de la borne
+
+        /**
+         * @brief code du type de la borne
+         */
         string codeTypeBorne;
 };
 #endif // TYPEBORNE_H
