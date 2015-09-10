@@ -5,6 +5,8 @@
  */
 
 #include "station.h"
+#include "borne.h"
+#include "visite.h"
 
 /**
  * @brief Station::Station
@@ -24,12 +26,12 @@ void getVisiteAFaire()
     //ou null s'il n'y a aucune borne à réviser
     Visite laVisiteAFaire;
     //pour chaque borne du vecteur lesBornes
-    foreach(int idBorne, lesBornes)
+    foreach(Borne laBorne, lesBornes)
     {
         //si la borne est à visiter je l'ajoute à laVisiteAFaire
-        if(idBorne == p)
+        if(laBorne.estAReviser())
         {
-            laVisiteAFaire=idBorne;
+            laVisiteAFaire.changerEtat();
             //je renvoie laVisiteAFaire
             return laVisiteAFaire;
         }
