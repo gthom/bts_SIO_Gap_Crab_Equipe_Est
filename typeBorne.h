@@ -20,7 +20,8 @@ class TypeBorne
      * nbUnitesEntreRevisions
      * public :
      * getDureeRevision
-     *
+     * getNbJoursEntreRevisions
+     * getNbUnitesEntreRevisions
      */
     public:
         //constructeur
