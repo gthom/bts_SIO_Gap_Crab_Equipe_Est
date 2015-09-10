@@ -21,7 +21,18 @@ Station::Station(int s, QString l, QVector<Borne> br)
     lesBornes=br;
 }
 
+Station::Station()
+{
+
+}
+
+
 //retourne l'identifiant de la station
+/**
+ * @brief Station::getId
+ * @return
+ *
+ */
 int Station::getId()
 {
     return idStation;
