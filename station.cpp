@@ -14,10 +14,11 @@
  * @param l
  */
 
-Station::Station(int s, QString l)
+Station::Station(int s, QString l, vector<Borne> br)
 {
     idStation=s;
     libelleEmplacement=l;
+    lesBornes=br;
 }
 
 Visite Station::getVisiteAFaire()
