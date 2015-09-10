@@ -21,7 +21,9 @@ Technicien::Technicien()
 {
 }
 
-// retourne la durée totale en minutes des visites affectées au technicien
+/**
+ * @brief retourne la durée totale en minutes des visites affectées au technicien
+ */
 int Technicien::getTempsOccupe()
 {
     int TotalDureeVisites=0;
@@ -32,8 +34,9 @@ int Technicien::getTempsOccupe()
     }
     return TotalDureeVisites;
 }
-
-// ajoute la visite uneVisite dans les visites affectées au technicien
+/**
+ * @brief ajoute la visite uneVisite dans les visites affectées au technicien
+ */
 void Technicien::affecterVisite(uneVisite Visite)
 {
     lesVisites= new * Visite;
