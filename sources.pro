@@ -13,14 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
+        mainwindow.cpp\
         typeBorne.cpp\
         station.cpp\
         visite.cpp
 
 
-HEADERS  += mainwindow.h \
-    typeBorne.h
+HEADERS  += mainwindow.h\
+    typeBorne.h\
     visite.h\
     station.h
 
