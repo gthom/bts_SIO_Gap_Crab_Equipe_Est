@@ -25,6 +25,8 @@ private:
 public:
     //constructeur de la station
     Station(int s, QString l, QVector<Borne> br);
+    //constructeur vide
+    Station();
     //retourne l'id de la station
     int getId();
     //retourne le libellé de la station
