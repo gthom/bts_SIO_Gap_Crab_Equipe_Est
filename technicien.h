@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 #include <QString>
-#include <QVector>
+#include <vector>
 #include "visite.h"
 using namespace std;
 
@@ -33,11 +33,11 @@ class Technicien
 		int matricule; //matricule du technicien
         QString nom; //nom du technicien
         QString prenom; // prénom du technicien
-        QVector<visite> tabVisite; //ensemble des visites affectées au technicien
+        QVector<Visite> lesVisites; //ensemble des visites affectées au technicien
 		
 	public:
 		//constructeur
-        Technicien(int m, QString n, QString p, QVector tv);
+        Technicien(int m, QString n, QString p, vector lv);
 		Technicien();
 
         //fonctions
