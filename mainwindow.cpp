@@ -27,7 +27,7 @@ void MainWindow::on_pushButtonConnect_clicked()
     query.exec("SELECT * FROM STATION");
     while(query.next())
     {
-
+        Station nouvelleStation = new Station(query.value(0).toInt(), query.value(1).toString())
     }
 
     ui->tableViewStation->setModel(model);
