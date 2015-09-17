@@ -19,7 +19,7 @@ Station::Station(int s, QString l)
 {
     idStation=s;
     libelleEmplacement=l;
-
+/*
     //requête qui va chercher les infos des Bornes dans la base de donnée,
     //et les ajoutes à l'idStation selectionné
     QSqlQuery query;
