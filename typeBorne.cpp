@@ -2,6 +2,8 @@
  * @date 10 septembre 2015
  * @author Alexia Fontraille
  * @file typeBorne.cpp
+ * @version
+ * @brief travail sur les type de borne
  */
 
 #include <iostream>
