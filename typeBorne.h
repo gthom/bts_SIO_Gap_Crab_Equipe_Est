@@ -4,10 +4,11 @@
  * @date 10 septembre 2015
  */
 
-#include <iostream>
-#include <QString>
+
 #ifndef TYPEBORNE_H
 #define TYPEBORNE_H
+#include <iostream>
+#include <QString>
 
 class TypeBorne
 {
