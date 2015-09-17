@@ -22,12 +22,8 @@ Technicien::Technicien(int m, QString n, QString p, vector<Visite> lv)
     //requête qui va chercher les infos des Technicien dans la bdd
     //et les ajoute à la visite selectionnée
     //QSqlQuery query;
-    //query.exec("SELECT * FROM TECHNICIEN WHERE id = '" + QString::number(lesVisites) + "'");
-    //tant que la requete renvoi un résultats
-    //while(query.next())
-    //{
-        //QString idBorne = query.value(0).toInt();
-    //}
+    //query.exec("SELECT * FROM TECHNICIEN WHERE id = ");
+
 	
 }
 /**
