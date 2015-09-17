@@ -13,7 +13,6 @@
  * @param l
  * le constructeur de la station
  */
-
 Station::Station(int s, QString l, QVector<Borne> br)
 {
     idStation=s;
@@ -78,4 +77,25 @@ Visite Station::getVisiteAFaire()
     //je renvoie laVisiteAFaire
     return Visite(this,vb);
 }
+
+/*void Station::ajoutDonnee()
+{
+    //STATION (id, nom, adresseRue, coordLat, coordLong)
+    QSqlQuery query("SELECT * FROM Station");
+
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
