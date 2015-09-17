@@ -32,3 +32,8 @@ void MainWindow::on_pushButtonConnect_clicked()
 
     ui->tableViewStation->setModel(model);
 }
+
+void MainWindow::on_action_Quitter_triggered()
+{
+    close();
+}
