@@ -1,6 +1,19 @@
 #include "borne.h"
 #include <QTableView>
 
+Borne::Borne(int i, QDate ddr, int idcu)
+{
+    idBorne = i;
+    dateDerniereRevision = ddr;
+    indiceCompteurUnites = idcu;
+    leType = new TypeBorne();
+}
+
+Borne::Borne()
+{
+
+}
+
 int Borne::getDureeRevision()
 {
     return dureeRevision;
