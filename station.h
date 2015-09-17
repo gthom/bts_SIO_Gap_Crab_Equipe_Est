@@ -6,10 +6,10 @@
 
 #ifndef STATION_H
 #define STATION_H
-//#include "borne.h"
+#include "borne.h"
 #include <QString>
 #include <QVector>
-//#include "visite.h"
+#include "visite.h"
 
 /**
  * @brief The Station class
