@@ -15,36 +15,99 @@
 #include "station.h"
 
 using namespace std;
+/**
+ * @brief création de la classe Station
+ * @class Station
+ */
 class Station;
-//déclaration
+/**
+ * @brief The Visite class
+ * @class Visite
+ */
 class Visite
 {
 	private :
 
-		//état de la visite : 'p' pour programmée, 'a' pour affectée, 'r' pour réalisée
-		char etat;
-		// durée totale en minutes requise pour réaliser l'ensemble des révisions 
-		// prévues sur les bornes de la station
+
+       /**
+        * @var char etat
+        * état de la visite : 'p' pour programmée, 'a' pour affectée; 'r' pour réalisée
+        */
+
+        char etat;
+
+        /**
+         * @brief dureeTotale
+         * @var int dureeTotale
+         * durée totale en minutes requise pour réaliser l'ensemble des révisions
+         * prévues sur les bornes de la station
+         */
+
 		int dureeTotale;
-		// la station concernée par la visite		
+
+        /**
+         * @brief laStation
+         * la station concernée par la visite
+         */
+
         Station* laStation;
-		// la collection des bornes de laStation concernées par la visite
+
+        /**
+         * @brief tabBorne
+         * collection des bornes de laStation par la visite
+         */
+
 		vector<Borne> tabBorne; 
 
     public :
 		
-		// constructeur de Visite
+
+        /**
+         * @brief Visite
+         * @param ls
+         * @param tb
+         * constructeur de Visite
+         */
+
         Visite(Station* ls, vector<Borne> tb);
-        // constructeur vide
+
+        /**
+         * @brief Visite
+         * constructeur vide
+         */
+
 		Visite();
-		// retourne la durée totale en minutes requise pour réaliser l'ensemble
-		// des révisions prévues sur les bornes de la station
+
+        /**
+         * @brief getDureeTotale
+         * @return total
+         * retourne la durée totale en minutes requise pour réaliser l'ensemble
+         * des révisions prévues sur les bornes de la station
+         */
+
 		int getDureeTotale();
-		// retourne l'état de la visite
+
+        /**
+         * @brief getEtat
+         * @return etat
+         * retourne l'état de la visite
+         */
+
 		char getEtat();
-		// retourne l'état de la visite
+
+        /**
+         * @brief changerEtat
+         * permet de modifier l'état de la visite
+         */
+
         void changerEtat();
-        // permet l'ajout d'une borne
+
+        /**
+         * @brief addBorne
+         * @param laBorne
+         * permet l'ajout d'une borne
+         */
+
         void addBorne(Borne laBorne);
 
 };

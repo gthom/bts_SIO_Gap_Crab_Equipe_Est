@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>612</width>
+    <width>545</width>
     <height>499</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Gestion Station</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -25,11 +25,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QTableWidget" name="tableWidget">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-       </widget>
+       <widget class="QTableView" name="tableViewStation"/>
       </item>
      </layout>
     </item>
@@ -40,7 +36,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>612</width>
+     <width>545</width>
      <height>29</height>
     </rect>
    </property>

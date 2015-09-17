@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <station.h>
 
 namespace Ui {
 class MainWindow;
@@ -20,6 +21,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+    vector<Station> tabStation;
+
 };
 
 #endif // MAINWINDOW_H
