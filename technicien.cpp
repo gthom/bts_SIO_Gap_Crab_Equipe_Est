@@ -7,8 +7,11 @@
 #include <vector>
 #include "technicien.h"
 #include "visite.h"
+#include <QSqlQuery>
 
-//constructeur
+/**
+ * @brief Constructeur
+ */
 Technicien::Technicien(int m, QString n, QString p, vector<Visite> lv)
 {
     matricule = m;
@@ -17,6 +20,9 @@ Technicien::Technicien(int m, QString n, QString p, vector<Visite> lv)
     lesVisites = lv;
 	
 }
+/**
+ * @brief Constructeur vide
+ */
 Technicien::Technicien()
 {
 }
@@ -42,7 +48,9 @@ void Technicien::affecterVisite(Visite uneVisite)
     lesVisites.push_back(uneVisite);
 }
 
-// retourne l'ensemble des visites affectées au technicien
+/**
+ * @brief retourne l'ensemble des visites affectées au technicien
+ */
 vector<Visite> Technicien::getLesVisites()
 {
     return lesVisites;
