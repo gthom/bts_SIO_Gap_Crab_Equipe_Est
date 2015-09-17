@@ -12,6 +12,8 @@
 #include <QDate>
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlTableModel>
+#include <QtSql/QSqlRecord>
+#include <QSqlQuery>
 #include "typeBorne.h"
 using namespace std;
 class Borne
