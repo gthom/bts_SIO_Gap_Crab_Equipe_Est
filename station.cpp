@@ -13,11 +13,20 @@
  * @param l
  * le constructeur de la station
  */
-Station::Station(int s, QString l, QVector<Borne> br)
+Station::Station(int s, QString l)
 {
     idStation=s;
     libelleEmplacement=l;
-    lesBornes=br;
+
+
+    //Requête qui va chercher les infos dans la base de donnée,
+    //et les ajoutes
+    QSqlQuery query;
+    query.exec("SELECT * FROM BORNE WHERE idStation = '" + idStation + "'");
+    while(query.next())
+    {
+        //query.value(0).toInt()
+    }
 }
 
 /**
@@ -77,25 +86,3 @@ Visite Station::getVisiteAFaire()
     //je renvoie laVisiteAFaire
     return Visite(this,vb);
 }
-
-/*void Station::ajoutDonnee()
-{
-    //STATION (id, nom, adresseRue, coordLat, coordLong)
-    QSqlQuery query("SELECT * FROM Station");
-
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
