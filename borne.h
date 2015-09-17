@@ -12,6 +12,8 @@
 #include <QDate>
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlTableModel>
+#include <QtSql/QSqlRecord>
+#include <QSqlQuery>
 #include "typeBorne.h"
 using namespace std;
 class Borne
@@ -25,7 +27,7 @@ class Borne
 		// Nombre d'unités de recharge délivrées depuis la dernière révision,
 		// ce compteur étant remis à 0 à chaque révision
 
-		TypeBorne leType; // Le type de la borne
+        TypeBorne leType(int idBorne); // Le type de la borne
 
 	public:
 		int getDureeRevision(); 
