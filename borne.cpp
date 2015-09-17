@@ -1,12 +1,12 @@
 #include "borne.h"
 #include <QTableView>
 
-void Borne::getDureeRevision()
+int Borne::getDureeRevision()
 {
     return dureeRevision;
 }
 
-void Borne::estAReviser()
+bool Borne::estAReviser()
 {        
     // On crée une variable qui reçoit la date du jour
     QDate dateDuJour = QDate::currentDate();
