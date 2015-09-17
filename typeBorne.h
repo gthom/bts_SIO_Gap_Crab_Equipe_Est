@@ -2,6 +2,8 @@
  * @author Alexia Fontraille
  * @file typeBorne.h
  * @date 10 septembre 2015
+ * @brief classe TypeBorne
+ * @version
  */
 
 
@@ -14,16 +16,25 @@ class TypeBorne
 {
 
     /**
-     * @fn typeBorne
+     * @class classe typeBorne
+     * @brief classe représente les types de bornes
      * Private :
-     * dureeRevision
-     * nbJoursEntreRevisions
-     * nbUnitesEntreRevisions
-     * public :
-     * getDureeRevision
-     * getNbJoursEntreRevisions
-     * getNbUnitesEntreRevisions
+     * la durée de la révision
+     * le nombre de jours entre les révisions
+     * le nombre d'unités entre les révisions
+     * Public :
+     * @fn getDureeRevision
+     * @brief retourne la durée en minutes requise
+     * pour réaliser la révision sur les bornes de ce type
+     * @fn getNbJoursEntreRevisions
+     * @brief retourne le nb de jours
+     * au dela duquel il faut envisager une révision
+     * @fn getNbUnitesEntreRevisions
+     * @brief retourne le nb d'unités de recharge
+     * au dela duquel il faut envisager une révision
+     * sur les bornes de ce type
      */
+
     public:
 
         //constructeur
@@ -33,41 +44,34 @@ class TypeBorne
         //Accesseur en lecture
 
         /**
-         * @brief retourne la durée en minutes requise
-         * pour réaliser la révision sur les bornes de ce type
+         * @fn getDureeRevision
          */
         int getDureeRevision();
 
         /**
-         * @brief retourne le nb de jours
-         * au dela duquel il faut envisager une révision
-         * sur les bornes de ce type
+         * @fn getNbJoursEntreRevisions
          */
         int getNbJoursEntreRevisions();
 
         /**
-         * @brief retourne le nb d'unités de recharge
-         * au dela duquel il faut envisager une révision
-         * sur les bornes de ce type
+         * @fn getNbUnitesEntreRevisions
          */
         int getNbUnitesEntreRevisions();
 
     private:
 
-        /** @brief durée en minutes pour réaliser la révision
-         * sur les bornes de ce type
+        /**
+         * @brief la durée de la révision
          */
         int dureeRevision;
 
         /**
-         * @brief nb de jours qui séparent deux révisions successives
-         * d'une borne de ce type
+         * @brief le nombre de jours entre la révision
          */
         int nbJoursEntreRevisions;
 
         /**
-         * @brief nb d'unités de recharges au dela duquel
-         * il faut envisager une nvelle révision
+         * @brief le nombre d'unités entre la révision
          */
         int nbUnitesEntreRevisions;
 
