@@ -43,19 +43,22 @@ class Borne
          * @param idBorne
          * @return Retourne le type de la borne
          */
-        TypeBorne leType(int idBorne);
+        TypeBorne leType;
 
 	public:
         /**
          * @brief getDureeRevision
          * @return Retourne la durée en minutes requise pour réaliser la révision sur la borne, cette durée étant fonction du type de la borne.
          */
-		int getDureeRevision(); 
+        int getDureeRevision();
 
         /**
          * @brief estAReviser
          * @return Retourne vrai lorsque la borne doit être révisée, soit parce que le temps qui sépare deux révisions pour ce type de borne s'est écoulé depuis la date de la dernière révision, soit parce que le nombre d'unités de recharge délivrées par la borne depuis la dernière révision a atteint le seuil établi pour ce type de borne ; retourne faux sinon.
          */
 		bool estAReviser();
+
+        Borne(int i, QDate ddr, int idcu);
+        Borne();
 };
 #endif // BORNE_H
