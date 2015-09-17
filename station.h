@@ -13,6 +13,16 @@
 
 /**
  * @brief création de la classe Station
+ * Private :
+ * idStation
+ * libelleEmplacement
+ * vecteur lesBornes
+ * public :
+ * construteur de la station
+ * constructeur vide
+ * getId
+ * getLib
+ * getVisiteAFaire
  */
 class Visite;
 class Station
