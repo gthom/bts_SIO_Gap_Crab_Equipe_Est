@@ -11,6 +11,7 @@
  * @brief Station::Station
  * @param s
  * @param l
+ * le constructeur de la station
  */
 
 Station::Station(int s, QString l, QVector<Borne> br)
@@ -20,16 +21,18 @@ Station::Station(int s, QString l, QVector<Borne> br)
     lesBornes=br;
 }
 
+/**
+ * @brief Station::Station
+ * le constructeur vide
+ */
 Station::Station()
 {
 
 }
 
-
-//retourne l'identifiant de la station
 /**
  * @brief Station::getId
- * @return
+ * @return l'identifiant de la station
  *
  */
 int Station::getId()
@@ -37,13 +40,16 @@ int Station::getId()
     return idStation;
 }
 
-//retourne le libellé de l'emplacement
+/**
+ * @brief Station::getLib
+ * @return le libellé de l'emplacement
+ */
 QString Station::getLib()
 {
     return libelleEmplacement;
 }
 
-/* Visite Station::getVisiteAFaire()
+Visite Station::getVisiteAFaire()
 {
     //retourne une instance de classe Visite recensant toutes les bornes de la station qui nécessitent d'être révisées,
     //ou null s'il n'y a aucune borne à réviser
@@ -61,4 +67,4 @@ QString Station::getLib()
     //je renvoie laVisiteAFaire
     return laVisiteAFaire;
 }
-*/
+
