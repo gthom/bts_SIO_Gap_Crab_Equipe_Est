@@ -1,10 +1,12 @@
 #ifndef BORNE_H
 #define BORNE_H
-/*
- * Auteur : tromanin
- * Date de création : jeudi 3 septembre 2015, 11:11:57
- * Rôle : Classe de la Borne.
- * 
+
+/**
+ *  @file borne.h
+ *  @author tromanin
+ *  @date jeudi 3 septembre 2015, 11:11:57
+ *  @brief Classe de la Borne.
+ *  @class Borne
  */
 
 #include <iostream>
@@ -19,26 +21,41 @@ using namespace std;
 class Borne
 {
 	private:
-		int idBorne; // Identifiant de la borne (entier)
+         /**
+         * @brief idBorne, identifiant de la borne (entier)
+         */
+        int idBorne;
 
-        QDate dateDerniereRevision; // Date de la dernière révision effectuée sur la borne
+        /**
+         * @brief dateDerniereRevision, date de la dernière révision effectuée sur la borne
+         */
+        QDate dateDerniereRevision;
 
+        /**
+         * @brief indiceCompteurUnites
+         *  Nombre d'unités de recharge délivrées depuis la dernière révision,
+         *  Ce compteur étant remis à 0 à chaque révision.
+         */
 		int indiceCompteurUnites;
-		// Nombre d'unités de recharge délivrées depuis la dernière révision,
-		// ce compteur étant remis à 0 à chaque révision
 
-        TypeBorne leType(int idBorne); // Le type de la borne
+        /**
+         * @brief leType
+         * @param idBorne
+         * @return Retourne le type de la borne
+         */
+        TypeBorne leType(int idBorne);
 
 	public:
+        /**
+         * @brief getDureeRevision
+         * @return Retourne la durée en minutes requise pour réaliser la révision sur la borne, cette durée étant fonction du type de la borne.
+         */
 		int getDureeRevision(); 
-		// Retourne la durée en minutes requise pour réaliser la révision sur la borne,
-		// cette durée étant fonction du type de la borne
 
+        /**
+         * @brief estAReviser
+         * @return Retourne vrai lorsque la borne doit être révisée, soit parce que le temps qui sépare deux révisions pour ce type de borne s'est écoulé depuis la date de la dernière révision, soit parce que le nombre d'unités de recharge délivrées par la borne depuis la dernière révision a atteint le seuil établi pour ce type de borne ; retourne faux sinon.
+         */
 		bool estAReviser();
-		// Retourne vrai lorsque la borne doit être révisée, soit parce que le temps qui sépare
-		// deux révisions pour ce type de borne s'est écoulé depuis la date de la dernière révision, 
-		// soit parce que le nombre d'unités de recharge délivrées par la borne 
-		// depuis la dernière révision a atteint le seuil établi pour ce type de borne ; 
-		// retourne faux sinon
 };
 #endif // BORNE_H
