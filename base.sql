@@ -14,6 +14,7 @@ Drop table if exists INTERVENTION;
 -- nbr d'unité de recharge
 create table TYPEBORNE(
 	id tinyint,
+	libelle varchar(20),
 	dureeRevision smallint,
 	intervalRevision smallint,
 	nbrUniteRecharge smallint,
