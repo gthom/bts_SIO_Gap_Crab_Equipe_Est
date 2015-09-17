@@ -12,17 +12,20 @@
 
 class Maintenance
 {
+private:
+    vector <Stations> lesStations;
+    vector <Techniciens> lesTechniciens;
+    vector <Visites> lesVisites;
+
 public:
+    Maintenance(vector<Stations> ls, vector<Techniciens> lt, vector<Visites> lv);
     Maintenance();
 
     void reviser (); // Etablit l'ensemble des visites à réaliser sur les stations
     void affecterVisites();// Affecte les visites à réaliser aux techniciens, en répartissant équitablement le travail
                            // entre les techniciens. Chaque visite est affectée au technicien le moins occupé en temps
                            // total de maintenance préventive. L'état de chaque visite doit alors être mis à jour.
-private:
-    vector <stations> lesStations;
-    vector <techniciens> lesTechniciens;
-    vector <visites> lesVisites;
+
 };
 
 #endif // MAINTENANCE_H
