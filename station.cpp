@@ -53,7 +53,9 @@ Visite Station::getVisiteAFaire()
 {
     //retourne une instance de classe Visite recensant toutes les bornes de la station qui nécessitent d'être révisées,
     //ou null s'il n'y a aucune borne à réviser
-    Visite laVisiteAFaire;
+    int dureeRevision=0;
+    vector<Borne> vb;
+
     //pour chaque borne du vecteur lesBornes
     foreach(Borne laBorne, lesBornes)
     {
@@ -61,10 +63,11 @@ Visite Station::getVisiteAFaire()
         if(laBorne.estAReviser())
         {
             //je l'ajoute à laVisiteAFaire
-            laVisiteAFaire.addBorne(laBorne);
+            vb.push_back(laBorne);
+            dureeRevision+=laBorne.getDureeRevision();
         }
     }
     //je renvoie laVisiteAFaire
-    return laVisiteAFaire;
+    return Visite('p',dureeRevision,this,vb);
 }
 
