@@ -5,20 +5,25 @@
  * @class Maintenance
  */
 
-#include technicien.h
-#include station.h
+
 #ifndef MAINTENANCE_H
 #define MAINTENANCE_H
+
+#include "technicien.h"
+#include "station.h"
+#include <iostream>
+#include <QString>
+#include <vector>
 
 class Maintenance
 {
 private:
-    vector <Stations> lesStations;
-    vector <Techniciens> lesTechniciens;
-    vector <Visites> lesVisites;
+    vector<Station> lesStations;
+    vector<Technicien> lesTechniciens;
+    vector<Visite> lesVisites;
 
 public:
-    Maintenance(vector<Stations> ls, vector<Techniciens> lt, vector<Visites> lv);
+    Maintenance(vector<Station> ls, vector<Technicien> lt, vector<Visite> lv);
     Maintenance();
 
     void reviser (); // Etablit l'ensemble des visites à réaliser sur les stations

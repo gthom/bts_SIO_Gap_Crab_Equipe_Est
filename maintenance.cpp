@@ -1,6 +1,8 @@
 #include "maintenance.h"
+#include <iostream>
+#include <vector>
 
-Maintenance::Maintenance(vector<Stations> ls, vector<Techniciens> lt, vector<Visites> lv)
+Maintenance::Maintenance(vector<Station> ls, vector<Technicien> lt, vector<Visite> lv)
 {
     lesStations = ls;
     lesTechniciens = lt;
