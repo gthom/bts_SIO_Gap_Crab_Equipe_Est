@@ -34,7 +34,7 @@ class Visite
     public :
 		
 		// constructeur de Visite
-        Visite(char e, int d, Station* ls, vector<Borne> tb);
+        Visite(Station* ls, vector<Borne> tb);
 		Visite();
 		// retourne la durée totale en minutes requise pour réaliser l'ensemble
 		// des révisions prévues sur les bornes de la station
