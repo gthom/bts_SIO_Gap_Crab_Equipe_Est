@@ -37,7 +37,7 @@ private:
 
 public:
     //constructeur de la station
-    Station(int s, QString l, QVector<Borne> br);
+    Station(int s, QString l);
     //constructeur vide
     Station();
     //retourne l'id de la station
