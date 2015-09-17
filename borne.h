@@ -16,6 +16,8 @@
 #include <QtSql/QSqlTableModel>
 #include <QtSql/QSqlRecord>
 #include <QSqlQuery>
+#include <QTableView>
+#include <QSqlRecord>
 #include "typeBorne.h"
 using namespace std;
 class Borne
@@ -32,7 +34,7 @@ class Borne
         QDate dateDerniereRevision;
 
         /**
-         * @brief indiceCompteurUnites
+         *  @brief indiceCompteurUnites
          *  Nombre d'unités de recharge délivrées depuis la dernière révision,
          *  Ce compteur étant remis à 0 à chaque révision.
          */
@@ -44,6 +46,12 @@ class Borne
          * @return Retourne le type de la borne
          */
         TypeBorne leType;
+
+        /**
+         *  @brief dureeRevision
+         *  Durée en minutes requises pour réaliser la révision sur la borne.
+         */
+        int dureeRevision;
 
 	public:
         /**
@@ -58,7 +66,7 @@ class Borne
          */
 		bool estAReviser();
 
-        Borne(int i, QDate ddr, int idcu);
+        Borne(int i, QDate ddr, int idcu, TypeBorne l);
         Borne();
 };
 #endif // BORNE_H
