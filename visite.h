@@ -15,7 +15,7 @@
 #include "station.h"
 
 using namespace std;
-
+class Station;
 //déclaration
 class Visite
 {
