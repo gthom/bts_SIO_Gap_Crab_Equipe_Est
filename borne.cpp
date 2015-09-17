@@ -1,9 +1,4 @@
 #include "borne.h"
-#include "typeborne.h"
-#include <QtSql/QSqlDatabase>
-#include <QtSql/QSqlTableModel>
-#include <QtSql/QSqlRecord>
-#include <QSqlQuery>
 
 void Borne::getDureeRevision()
 {

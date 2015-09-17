@@ -6,21 +6,24 @@
 
 #ifndef STATION_H
 #define STATION_H
-//#include "borne.h"
+#include "borne.h"
 #include <QString>
 #include <QVector>
-//#include "visite.h"
+#include "visite.h"
 
 /**
- * @brief The Station class
+ * @brief création de la classe Station
  */
-
+class Visite;
 class Station
 {
 private:
-    int idStation; //id de la station
-    QString libelleEmplacement; //libellé de l'emplacement de la station
-    QVector<Borne> lesBornes; //les bornes de la station
+    //id de la station
+    int idStation;
+    //libellé de l'emplacement de la station
+    QString libelleEmplacement;
+    //les bornes de la station
+    QVector<Borne> lesBornes;
 
 public:
     //constructeur de la station
@@ -33,10 +36,10 @@ public:
     QString getLib();
     // retourne une instance de classe Visite recensant toutes les bornes de la station
     // qui nécessitent d'être révisées, ou null s'il n'y a aucune borne à réviser
-   // Visite getVisiteAFaire();
+    Visite getVisiteAFaire();
 
 
 
 };
 
-#endif // STATION_H
+#endif  //STATION_H
