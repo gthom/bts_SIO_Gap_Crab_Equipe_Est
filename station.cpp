@@ -7,6 +7,7 @@
 #include "station.h"
 #include "borne.h"
 #include <QSqlQuery>
+#include <QDate>
 
 /**
  * @brief Station::Station
@@ -24,11 +25,18 @@ Station::Station(int s, QString l)
     QSqlQuery query;
     query.exec("SELECT * FROM BORNE WHERE idStation = '" + QString::number(idStation) + "'");
     //tant que la requete envoi un résultats
+    /*
     while(query.next())
     {
-       // int idBorne = query.value(0).toInt();
 
+        QString format("yyyy/MM/dd hh:mm:ss");
+
+        int idBorne = query.value(0).toInt();
+        QDate dateDerniereRevision = QDate::fromString(query.value(1).toString(), format);
+        Borne vb = new Borne(idBorne, dateDerniereRevision, 1);
+        vb.push_back(vb);
     }
+    */
 }
 
 /**
