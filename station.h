@@ -6,7 +6,7 @@
 
 #ifndef STATION_H
 #define STATION_H
-//#include "borne.h"
+#include "borne.h"
 #include <QString>
 #include <QVector>
 #include "visite.h"
@@ -33,7 +33,7 @@ public:
     QString getLib();
     // retourne une instance de classe Visite recensant toutes les bornes de la station
     // qui nécessitent d'être révisées, ou null s'il n'y a aucune borne à réviser
-    Visite getVisiteAFaire();
+   // Visite getVisiteAFaire();
 
 
 

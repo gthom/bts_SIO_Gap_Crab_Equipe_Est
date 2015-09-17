@@ -6,7 +6,6 @@
 
 #include "station.h"
 #include "borne.h"
-#include "visite.h"
 
 /**
  * @brief Station::Station
@@ -44,7 +43,7 @@ QString Station::getLib()
     return libelleEmplacement;
 }
 
-Visite Station::getVisiteAFaire()
+/* Visite Station::getVisiteAFaire()
 {
     //retourne une instance de classe Visite recensant toutes les bornes de la station qui nécessitent d'être révisées,
     //ou null s'il n'y a aucune borne à réviser
@@ -62,3 +61,4 @@ Visite Station::getVisiteAFaire()
     //je renvoie laVisiteAFaire
     return laVisiteAFaire;
 }
+*/
