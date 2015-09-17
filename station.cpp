@@ -76,6 +76,6 @@ Visite Station::getVisiteAFaire()
         }
     }
     //je renvoie laVisiteAFaire
-    return Visite('p',dureeRevision,this,vb);
+    return Visite(this,vb);
 }
 
