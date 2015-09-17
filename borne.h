@@ -25,7 +25,7 @@ class Borne
 		// Nombre d'unités de recharge délivrées depuis la dernière révision,
 		// ce compteur étant remis à 0 à chaque révision
 
-		TypeBorne leType; // Le type de la borne
+        TypeBorne::leType(int idBorne, int indiceCompteurUnites); // Le type de la borne
 
 	public:
 		int getDureeRevision(); 
@@ -39,4 +39,4 @@ class Borne
 		// depuis la dernière révision a atteint le seuil établi pour ce type de borne ; 
 		// retourne faux sinon
 };
-#endif // BORNE_H
+#endif BORNE_H
