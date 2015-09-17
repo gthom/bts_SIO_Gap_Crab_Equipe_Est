@@ -27,14 +27,14 @@ class Visite
 		// prévues sur les bornes de la station
 		int dureeTotale;
 		// la station concernée par la visite		
-		Station laStation; 
+        Station* laStation;
 		// la collection des bornes de laStation concernées par la visite
 		vector<Borne> tabBorne; 
 
     public :
 		
 		// constructeur de Visite
-		Visite(char e, int d, Station ls, vector<Borne> tb);
+        Visite(char e, int d, Station* ls, vector<Borne> tb);
 		Visite();
 		// retourne la durée totale en minutes requise pour réaliser l'ensemble
 		// des révisions prévues sur les bornes de la station

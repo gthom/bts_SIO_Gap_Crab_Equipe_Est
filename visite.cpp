@@ -19,7 +19,7 @@ Visite::Visite()
 }
 // ce constructeur valorise tous les attributs privés de la classe Visite, y compris l'état et la
 // durée totale de la visite
-Visite::Visite(vector<Borne> tb, Station ls)
+Visite::Visite(vector<Borne> tb, Station* ls)
 {
     laStation = ls;
     tabBorne = tb;
