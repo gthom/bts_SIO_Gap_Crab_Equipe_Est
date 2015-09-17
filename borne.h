@@ -10,6 +10,8 @@
 #include <iostream>
 #include <string>
 #include <QDate>
+#include <QtSql/QSqlDatabase>
+#include <QtSql/QSqlTableModel>
 #include "typeBorne.h"
 using namespace std;
 class Borne
@@ -17,7 +19,7 @@ class Borne
 	private:
 		int idBorne; // Identifiant de la borne (entier)
 
-        	QDate dateDerniereRevision; // Date de la dernière révision effectuée sur la borne
+        QDate dateDerniereRevision; // Date de la dernière révision effectuée sur la borne
 
 		int indiceCompteurUnites;
 		// Nombre d'unités de recharge délivrées depuis la dernière révision,
