@@ -5,10 +5,14 @@
  * @class Maintenance
  */
 
-#include technicien.h
-#include station.h
+
 #ifndef MAINTENANCE_H
 #define MAINTENANCE_H
+
+#include "technicien.h"
+#include "station.h"
+#include <iostream>
+#include <vector>
 
 class Maintenance
 {
