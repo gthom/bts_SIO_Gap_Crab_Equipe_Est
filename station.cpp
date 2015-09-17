@@ -6,6 +6,7 @@
 
 #include "station.h"
 #include "borne.h"
+#include <QSqlQuery>
 
 /**
  * @brief Station::Station
@@ -13,12 +14,21 @@
  * @param l
  * le constructeur de la station
  */
-
-Station::Station(int s, QString l, QVector<Borne> br)
+Station::Station(int s, QString l)
 {
     idStation=s;
     libelleEmplacement=l;
-    lesBornes=br;
+
+    //requête qui va chercher les infos des Bornes dans la base de donnée,
+    //et les ajoutes à l'idStation selectionné
+    QSqlQuery query;
+    query.exec("SELECT * FROM BORNE WHERE idStation = '" + QString::number(idStation) + "'");
+    //tant que la requete envoi un résultats
+    while(query.next())
+    {
+       // int idBorne = query.value(0).toInt();
+
+    }
 }
 
 /**
@@ -78,4 +88,3 @@ Visite Station::getVisiteAFaire()
     //je renvoie laVisiteAFaire
     return Visite(this,vb);
 }
-

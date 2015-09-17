@@ -8,6 +8,19 @@ Drop table if exists INCIDENT;
 Drop table if exists INTERVENTION;
 
 -- Création des tables
+
+-- Création table typeBorne
+-- intervalRevision : nombre de jours entre deux révision 
+-- nbr d'unité de recharge
+create table TYPEBORNE(
+	id tinyint,
+	libelle varchar(20),
+	dureeRevision smallint,
+	intervalRevision smallint,
+	nbrUniteRecharge smallint,
+	primary key(id)
+)engine=innodb charset=UTF8;
+
 -- Création table Technicien
 create table TECHNICIEN(
 	id smallint,
@@ -37,6 +50,7 @@ create table BORNE(
 	dateMiseEnService date,
 	dateDerniereRevision date,
 	idStation smallint,
+	idTypeBorne tinyint,
 	primary key (id)
 	-- Clé étrangère : idStation en référence à id de STATION
 )engine=innodb charset=UTF8;
@@ -95,3 +109,7 @@ Alter table INCIDENT
 Alter table INTERVENTION
 	add foreign key (idIncident) references INCIDENT(id),
 	add foreign key (idTechnicien) references TECHNICIEN(id);
+	
+-- Clé étrangère : BORNE.idTypeBorne en référence à id de TYPEBORNE
+Alter table BORNE
+	add foreign key (idTypeBorne) references TYPEBORNE(id);
