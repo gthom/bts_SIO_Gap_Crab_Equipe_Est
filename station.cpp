@@ -49,6 +49,14 @@ QString Station::getLib()
     return libelleEmplacement;
 }
 
+/**
+ * @brief Station::getVisiteAFaire
+ * @return une visite à faire
+ * quel est l'état de la visite
+ * la durée de la visite
+ * dans la station concerner
+ * et quelle borne
+ */
 Visite Station::getVisiteAFaire()
 {
     //retourne une instance de classe Visite recensant toutes les bornes de la station qui nécessitent d'être révisées,

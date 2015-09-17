@@ -9,12 +9,12 @@
 #include "visite.h"
 
 //constructeur
-Technicien::Technicien(int m, QString n, QString p, vector lv)
+Technicien::Technicien(int m, QString n, QString p, vector<Visite> lv)
 {
     matricule = m;
     nom = n;
     prenom = p;
-    lesVisites = tv;
+    lesVisites = lv;
 	
 }
 Technicien::Technicien()
@@ -30,20 +30,20 @@ int Technicien::getTempsOccupe()
     // pour chaque visite affectée au technicien, on additionne la durée
     for(int compteur=0;compteur<lesVisites.size();compteur++)
     {
-        TotalDureeVisites+=Visite.getDureeTotale();
+        TotalDureeVisites += lesVisites[compteur].getDureeTotale();
     }
     return TotalDureeVisites;
 }
 /**
  * @brief ajoute la visite uneVisite dans les visites affectées au technicien
  */
-void Technicien::affecterVisite(uneVisite Visite)
+void Technicien::affecterVisite(Visite uneVisite)
 {
-    lesVisites= new * Visite;
+    lesVisites.push_back(uneVisite);
 }
 
 // retourne l'ensemble des visites affectées au technicien
-Visite Technicien::getLesVisites()
+vector<Visite> Technicien::getLesVisites()
 {
     return lesVisites;
 }
