@@ -1,5 +1,5 @@
 #include "borne.h"
-#include "typeborne.h"
+#include "typeBorne.h"
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlTableModel>
 #include <QtSql/QSqlRecord>
