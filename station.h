@@ -8,7 +8,6 @@
 #define STATION_H
 #include "borne.h"
 #include <QString>
-#include <QVector>
 #include "visite.h"
 
 /**
@@ -33,7 +32,7 @@ private:
     //libellé de l'emplacement de la station
     QString libelleEmplacement;
     //les bornes de la station
-    QVector<Borne> lesBornes;
+    vector<Borne> lesBornes;
 
 public:
     //constructeur de la station
