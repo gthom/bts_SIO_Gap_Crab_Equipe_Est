@@ -69,7 +69,7 @@ bool Borne::estAReviser()
     // On récupère la date de la dernière révision dans la BDD
     QSqlQuery query("SELECT * FROM BORNE");
     int dateDerniereRevision = query.record().value("dateDerniereRevision").toInt();
-    QDate dateDerRevision = QDate(2015,09,15); // On définie une date fixe pour l'instant, ensuite il faudra récupérer cette date dans la BDD.
+    QDate dateDerRevision = QDate(2015,9,15); // On définie une date fixe pour l'instant, ensuite il faudra récupérer cette date dans la BDD.
 
     // On calcule la différence entre 2 dates
     int maDate = dateDerRevision.daysTo(dateDuJour);
