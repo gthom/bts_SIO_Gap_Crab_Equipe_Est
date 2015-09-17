@@ -40,16 +40,16 @@ class Technicien
 		
 	public:
 		//constructeur
-        Technicien(int m, QString n, QString p, vector lv);
+        Technicien(int m, QString n, QString p, vector<Visite> lv);
 		Technicien();
 
         //fonctions
         // retourne la durée totale en minutes des visites affectées au technicien
 		int getTempsOccupe();
         // ajoute la visite uneVisite dans les visites affectées au technicien
-        void affecterVisite(uneVisite Visite);
+        void affecterVisite(Visite uneVisite);
         // retourne l'ensemble des visites affectées au technicien
-		int getLesVisites();
+        vector<Visite> getLesVisites();
 };
 
 #endif // TECHNICIEN_H
