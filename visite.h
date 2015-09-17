@@ -35,6 +35,7 @@ class Visite
 		
 		// constructeur de Visite
         Visite(Station* ls, vector<Borne> tb);
+        // constructeur vide
 		Visite();
 		// retourne la durée totale en minutes requise pour réaliser l'ensemble
 		// des révisions prévues sur les bornes de la station
@@ -43,6 +44,7 @@ class Visite
 		char getEtat();
 		// retourne l'état de la visite
         void changerEtat();
+        // permet l'ajout d'une borne
         void addBorne(Borne laBorne);
 
 };

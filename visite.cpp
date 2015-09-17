@@ -61,7 +61,7 @@ void Visite::changerEtat()
         }
     }
 }
-
+// permet l'ajout d'une borne
 void Visite::addBorne(Borne laBorne)
 {
    tabBorne.push_back(laBorne);
