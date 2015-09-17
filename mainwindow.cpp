@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QSqlTableModel>
+#include <QSqlQuery>
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -16,9 +18,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButtonConnect_clicked()
 {
-    QSqlTableModel *model;
+    QSqlTableModel *model = new QSqlTableModel();
     model->setTable("STATION");
     model->setEditStrategy(QSqlTableModel::OnRowChange);
+    model->select();
 
-    ui->tableWidget->setModel(model);
+    QSqlQuery query;
+    query.exec("SELECT * FROM STATION");
+    while(query.next())
+    {
+
+    }
+
+    ui->tableViewStation->setModel(model);
 }
