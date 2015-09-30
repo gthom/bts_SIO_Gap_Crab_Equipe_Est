@@ -65,3 +65,8 @@ void MainWindow::on_tableViewStation_clicked(const QModelIndex &index)
 {
 
 }
+
+void MainWindow::on_action_Quitter_2_triggered()
+{
+    close();
+}

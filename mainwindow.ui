@@ -97,7 +97,7 @@
     <property name="title">
      <string>&amp;Fichier</string>
     </property>
-    <addaction name="action_Quitter"/>
+    <addaction name="action_Quitter_2"/>
    </widget>
    <addaction name="menu_Fichier"/>
   </widget>
@@ -110,7 +110,7 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="action_Quitter">
+  <action name="action_Quitter_2">
    <property name="text">
     <string>&amp;Quitter</string>
    </property>
