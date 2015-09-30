@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>545</width>
-    <height>499</height>
+    <width>787</width>
+    <height>695</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,7 +21,7 @@
        <bool>true</bool>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -72,6 +72,16 @@
        <attribute name="title">
         <string>Interventions</string>
        </attribute>
+       <widget class="QTableView" name="tableViewIntervention">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>11</y>
+          <width>501</width>
+          <height>331</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </widget>
     </item>
@@ -82,7 +92,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>545</width>
+     <width>787</width>
      <height>29</height>
     </rect>
    </property>

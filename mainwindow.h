@@ -22,7 +22,9 @@ private slots:
 
     void on_action_Quitter_2_triggered();
 
-    void afficheStation();
+    void afficheStations();
+    void afficheBornes();
+    void afficheInterventions();
 
 private:
     Ui::MainWindow *ui;
