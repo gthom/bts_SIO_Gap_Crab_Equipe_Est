@@ -17,11 +17,12 @@ public:
     ~MainWindow();
     
 private slots:
-    void on_pushButtonConnect_clicked();
 
     void on_tableViewStation_clicked(const QModelIndex &index);
 
     void on_action_Quitter_2_triggered();
+
+    void afficheStation();
 
 private:
     Ui::MainWindow *ui;

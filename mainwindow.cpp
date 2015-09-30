@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    afficheStation();
 }
 
 /**
@@ -38,22 +39,6 @@ MainWindow::~MainWindow()
  * Evènement permettant au programme de lister toute les station dans un table view.
  */
 
-void MainWindow::on_pushButtonConnect_clicked()
-{
-    QSqlTableModel *model = new QSqlTableModel();
-    model->setTable("STATION");
-    model->setEditStrategy(QSqlTableModel::OnRowChange);
-    model->select();
-
-    QSqlQuery query;
-    query.exec("SELECT * FROM STATION");
-    while(query.next())
-    {
-        Station* nouvelleStation = new Station(query.value(0).toInt(), query.value(1).toString());
-    }
-
-    ui->tableViewStation->setModel(model);
-}
 
 /**
  * @brief MainWindow::on_tableViewStation_clicked
@@ -69,4 +54,25 @@ void MainWindow::on_tableViewStation_clicked(const QModelIndex &index)
 void MainWindow::on_action_Quitter_2_triggered()
 {
     close();
+}
+
+/**
+ * @brief MainWindow::afficheStation
+ * Affiche les stations dans le tableViewStation
+ */
+void MainWindow::afficheStation()
+{
+    QSqlTableModel *model = new QSqlTableModel();
+    model->setTable("STATION");
+    model->setEditStrategy(QSqlTableModel::OnRowChange);
+    model->select();
+
+    QSqlQuery query;
+    query.exec("SELECT * FROM STATION");
+    while(query.next())
+    {
+        Station* nouvelleStation = new Station(query.value(0).toInt(), query.value(1).toString());
+    }
+
+    ui->tableViewStation->setModel(model);
 }
