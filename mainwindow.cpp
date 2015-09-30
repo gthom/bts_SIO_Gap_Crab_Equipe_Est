@@ -116,9 +116,6 @@ void MainWindow::afficheBornes()
     modelBornes->setHeaderData(4,Qt::Horizontal,tr("Id Station"));
     modelBornes->setHeaderData(5,Qt::Horizontal,tr("Id TypeBorne"));
 
-
-    QSqlQuery queryBornes;
-    queryBornes.exec("SELECT * FROM BORNE");
     ui->tableViewBorne->setModel(modelBornes);
     ui->tableViewBorne->setColumnHidden(0, true);//on masque l'identifiant
     ui->tableViewBorne->setColumnWidth(1,100);//on change la taille de la colonne
@@ -144,8 +141,6 @@ void MainWindow::afficheInterventions()
     modelInterventions->setHeaderData(3,Qt::Horizontal,tr("Id Incident"));
     modelInterventions->setHeaderData(4,Qt::Horizontal,tr("Id Technicien"));
 
-    QSqlQuery queryInterventions;
-    queryInterventions.exec("SELECT * FROM INTERVENTION");
     ui->tableViewIntervention->setModel(modelInterventions);
     ui->tableViewIntervention->setColumnHidden(0, true);//on masque l'identifiant
     ui->tableViewIntervention->setColumnHidden(0, true);//on masque l'identifiant
@@ -153,4 +148,38 @@ void MainWindow::afficheInterventions()
     ui->tableViewIntervention->setColumnWidth(2,150);
     ui->tableViewIntervention->setColumnWidth(3,100);
     ui->tableViewIntervention->setColumnWidth(4,100);
+}
+
+void MainWindow::on_pushButtonStationAjouter_clicked()
+{
+    //on récupere l'id max des stations
+    QSqlQuery reqIdMax;
+    reqIdMax.exec("select max(id)+1 from STATION");
+    reqIdMax.first();
+    int max=reqIdMax.value(0).toInt();
+
+    QString nom=ui->lineEditStationNom->text();//on récupère les valeurs
+    QString adresse=ui->lineEditStationAdresse->text();
+    float latitude=ui->lineEditStationLatitude->text().toFloat();
+    float longitude=ui->lineEditStationLongitude->text().toFloat();
+
+    modelStations = new QSqlRelationalTableModel;
+    modelStations->setTable("STATION");
+    modelStations->setEditStrategy(QSqlRelationalTableModel::OnFieldChange);
+
+    QSqlRecord record =modelStations->record();
+    record.setValue(0,max);
+    record.setValue(1,nom);
+    record.setValue(2,adresse);
+    record.setValue(3,latitude);
+    record.setValue(4,longitude);
+
+    modelStations->insertRecord(modelStations->rowCount(), record);
+
+    ui->lineEditStationNom->clear();
+    ui->lineEditStationAdresse->clear();
+    ui->lineEditStationLatitude->clear();
+    ui->lineEditStationLongitude->clear();
+
+
 }

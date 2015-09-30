@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <station.h>
+#include <QSqlRelationalTableModel>
 
 namespace Ui {
 class MainWindow;
@@ -26,9 +27,12 @@ private slots:
     void afficheBornes();
     void afficheInterventions();
 
+    void on_pushButtonStationAjouter_clicked();
+
 private:
     Ui::MainWindow *ui;
 
+    QSqlRelationalTableModel * modelStations;
     vector<Station> tabStation;
 
 };
